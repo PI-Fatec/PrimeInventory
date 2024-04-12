@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
   }
 nav{
     display: flex;
@@ -59,7 +60,7 @@ nav{
 
   @media (max-width: 999px) {
     body {
-      overflow-x: hidden;
+      overflow-x:hidden ;
     }
     .nav-list {
       position: absolute;

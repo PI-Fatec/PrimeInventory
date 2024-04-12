@@ -1,15 +1,21 @@
-h2 {
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    color: white;
-}
-
-
-
 .Espaco {
     display: block;
     width: 100%;
     height: 10px;
     background-color: white;
+}
+.Espaco2 {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+}
+.Textoini{
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 30;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .mid {
@@ -17,12 +23,77 @@ h2 {
     width: 100%;
     height: 90vh;
     background-color: black;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: space-evenly;
+    
+    
+}
+.logo2 img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+@media (max-width: 768px) {
+    .mid {
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .Textoini h2 {
+        font-size: 1.5em; 
+    }
+}
+
+.mid > .Textoini{
+    margin-top: 200px;
 }
 
 
 
-.caixas > span{
-    color: white;
+.caixas{
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.caixinhas{
+    background-color: white;
+    width: 217px;
+    height: 217px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.caixinhas > p{
+    margin-left: 20px;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    color: black;
+    font-weight: bold;
+
+}
+
+.Apresent{
+    margin-left: 90px;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.Apresent-2{
+    margin-left: 90px;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    color: black;
+    
 }
