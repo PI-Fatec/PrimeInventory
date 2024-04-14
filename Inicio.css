@@ -55,7 +55,7 @@
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -63,17 +63,16 @@
 .caixinhas{
     background-color: white;
     width: 217px;
-    height: 217px;
+    height: 200px;
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 5px;
     box-sizing: border-box;
 }
 
 .caixinhas > p{
-    margin-left: 20px;
+    margin-left: 40px;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     color: black;
