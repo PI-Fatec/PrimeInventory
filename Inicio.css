@@ -128,7 +128,7 @@
 .Caixas_planos > a{
     
     width: 150px;
-    height: 30px;
+    height: 25px;
     background-color: #009AED;
     display: flex;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
@@ -136,6 +136,27 @@
     justify-content: center;
     margin-top: 40px;
 
+}
+.Faleconosco{
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: space-between;
+    flex-direction:column-reverse;
+    margin-left: 6.6%;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+
+}
+
+
+ .Faleid{
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    
 }
 
 .Disp{
@@ -145,4 +166,30 @@
     letter-spacing: 1px;
     color: white;
     background-color: black;
+}
+.Fale{
+    
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    text-align: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.Faleconosco > .Faleid > p{
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    
+
+}
+.Faleconosco > .Fale > p{
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    
+
 }
