@@ -4,14 +4,13 @@
     
   }
 nav{
-    display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #000000;
   height: 8vh;
   width: 100%;
-    
 }
 .nav-list {
     list-style: none;
