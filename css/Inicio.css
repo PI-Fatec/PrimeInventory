@@ -26,6 +26,7 @@
     justify-content: space-evenly;
     
     
+    
 }
 .logo2 img {
     max-width: 100%; 
@@ -69,6 +70,7 @@
     flex-wrap: wrap;
     margin-bottom: 5px;
     box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .caixinhas > p{
@@ -121,6 +123,7 @@
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     align-items: center;
+    border-radius: 4px;
     
 
 }
@@ -193,3 +196,4 @@
     
 
 }
+
