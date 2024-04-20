@@ -138,8 +138,13 @@
     letter-spacing: 1px;
     justify-content: center;
     margin-top: 40px;
+    
 
 }
+.Caixas_planos > a:hover{
+    background-color: blue;
+}
+
 .Faleconosco{
     width: 100%;
     height: auto;
