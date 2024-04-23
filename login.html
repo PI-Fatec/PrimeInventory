@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link REL="SHORTCUT ICON" HREF="img/PrimeInventory2Logo 1 (1).svg">
-
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="./css/extends.css">
-    <title>Document</title>
+    
+    <title>Prime Inventory</title>
+    
+
+
 </head>
 <body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html"><img src="img/PrimeInventory2 1.png" alt="Logo da PrimeInventory">
+            </a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#Faleconos">Fale conosco</a></li>
+                <li><a href="#plan">Planos</a></li>
+                <li><a href="#sup">Suporte</a></li>
+                
+
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <img class="background-image" src="img/login/Vector 1.svg" alt="">
+        <img class="logo-image" src="img/login/PrimeInv 2.svg">
+        <p class="refrao">O seu banco de dados, sob controle.</p>
+    </div>
+    <div class="caixalogin">
+        <h1>Faça seu login</h1>
+        <form action="login">
+            <label for="emailogin">E-mail:</label><br>
+            <input type="email"><br>
+            <label for="senhalogin">Senha:</label> <br>
+            <input type="password"><br>
+            <button id="Confirmarlogin">Confirmar</button>
+
+
+        </form>
+        <p>Ainda não tem uma conta PrimeInv? <a href=""> Inscreva-se agora </a> </p>
+    </div>
+    
     
 </body>
+<script src="mobile-navbar.js"></script>
 </html>
