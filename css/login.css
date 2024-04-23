@@ -1,10 +1,22 @@
 body{
     background-color: white;
+   
 }
 .container {
-    position: relative;
+    position: block;
     width: 100%;
     height: auto; 
+}
+p{
+    text-align: center;
+}
+
+
+
+a{
+    color: black;
+    display: flex;
+    justify-content: center;
 }
 
 .background-image {
@@ -62,7 +74,9 @@ form{
 }
 input{
     border-radius: 5px;
+    border: 1px solid;
 }
+
 
 .caixalogin a{
     margin-top: 10px;
@@ -91,4 +105,17 @@ input{
 
 .caixalogin button:hover{
     background-color: #210ba0;
+}
+
+@media (max-width: 768px) {
+    .caixalogin {
+        top: 90%;  
+        left: 40%;
+        transform: translate(-50%, -50%);
+        width: auto; 
+        max-width: 300px; 
+        padding: 15px; 
+    }
+
+
 }
