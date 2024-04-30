@@ -2,7 +2,7 @@
     background-color: rgb(255, 255, 255);
     border: 2px solid #cccc;
     border-radius: 5px;
-    position: absolute;
+    position: fixed;
     top: 90%;  
     left: 50%; 
     transform: translate(-50%, -50%); 
@@ -31,9 +31,11 @@ input{
 .caixacadastro h1 {
     margin-left: 30%;
     margin-bottom: 70%;
-   display: block;
+   display: flex;
+   position: fixed;
+   justify-content: center;
+   align-items: center;
     font-size: 1.5em;
-    position: fixed;
     flex-wrap: wrap;
      
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
