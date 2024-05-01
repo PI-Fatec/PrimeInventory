@@ -4,35 +4,63 @@
     height: 10px;
     background-color: white;
 }
-.Espaco2 {
-    display: block;
+
+.mid {
     width: 100%;
-    height: 40px;
-    background-color: white;
+    height: 90%;
+    background-color: black;
 }
+.config_mid {
+    width: 80%;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .Textoini{
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     color: white;
-    font-size: 30;
+    font-size: 18pt;
     letter-spacing: 1px;
     text-align: center;
 }
 
-.mid {
-    display: flex;
-    width: 100%;
-    height: 90vh;
-    background-color: black;
-    justify-content: space-evenly;
-    
-    
-    
-}
-.logo2 img {
-    max-width: 100%; 
-    height: auto; 
+.logo2 {
+    max-width: 100%;
 }
 
+.caixas{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.caixinhas{
+    background-color: white;
+    width: 218px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.caixinhas p{
+    width: 80%;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 14pt;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.mid > .Textoini{
+    margin-top: 200px;
+}
 
 @media (max-width: 768px) {
     .mid {
@@ -45,58 +73,29 @@
     }
 }
 
-.mid > .Textoini{
-    margin-top: 200px;
-}
-
-
-
-.caixas{
-    background-color: black;
+.Espaco2 {
+    display: block;
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.caixinhas{
+    height: 40px;
     background-color: white;
-    width: 217px;
-    height: 200px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 5px;
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
-.caixinhas > p{
-    margin-left: 40px;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    color: black;
-    font-weight: bold;
-
 }
 
 .Apresent{
-    margin-left: 90px;
+    padding-left: 5%;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     color: black;
+    font-size: 13pt;
     font-weight: bold;
     
 }
 
 .Apresent-2{
     margin-left: 90px;
+    color: black;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
-    color: black;
-    
+    font-size: 14pt;
 }
 
 .Planos{
