@@ -99,50 +99,63 @@
     text-align: start;
 }
 
+.Disp{
+    text-align: center;
+    font-size: 26pt;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    color: white;
+    background-color: black;
+}
+
 .Planos{
     background-color: black;
     width: 100%;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: row;
 }
 
 .Caixas_planos{
-    margin-top: 50px ;
     background-color: white;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
     width: 298px;
     height: 425px;
-    display: grid;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    align-items: center;
-    border-radius: 4px;
-    
-
-}
-
-.Caixas_planos > a{
-    
-    width: 150px;
-    height: 25px;
-    background-color: #009AED;
+    margin: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.Caixas_planos h4{
+    font-size: 28pt;
+    font-style: bold;
+}
+
+.Caixas_planos h1{
+    font-size: 20pt;
+}
+
+.Caixas_planos a{
+    width: 150px;
+    height: 40px;
+    background-color: #009AED;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
-    justify-content: center;
     margin-top: 40px;
-    
-
 }
-.Caixas_planos > a:hover{
+
+.Caixas_planos  a:hover{
     background-color: blue;
+    color: white;
 }
 
 .Faleconosco{
@@ -153,9 +166,21 @@
     flex-direction:column-reverse;
     margin-left: 6.6%;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-
 }
 
+.Faleconosco > .Faleid > p{
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.Faleconosco > .Fale > p{
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
 
  .Faleid{
     justify-content: flex-start;
@@ -164,19 +189,9 @@
     text-align: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
-    
 }
 
-.Disp{
-    display: flex;
-    justify-content: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    color: white;
-    background-color: black;
-}
 .Fale{
-    
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -184,21 +199,3 @@
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
 }
-
-.Faleconosco > .Faleid > p{
-    text-align: center;
-    margin-top: 40px;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    
-
-}
-.Faleconosco > .Fale > p{
-    text-align: center;
-    margin-top: 40px;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    
-
-}
-
