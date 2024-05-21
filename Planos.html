@@ -3,29 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Inicio.css">
-    <link rel="stylesheet" href="css/navbar.css">
     <link REL="SHORTCUT ICON" HREF="img/PrimeInventory2Logo 1 (1).svg">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/extends.css">
+    <title>Prime Inventory</title>
 </head>
 <body>
     <header>
         <nav>
-            <a class="logo" href="index.html"><img src="img/PrimeInventory2 1.png" alt="Logo da PrimeInventory">
-            </a>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="config_nav">
+                <a href="index.html"><img src="img/PrimeInventory2 1.png" alt="Logo da PrimeInventory"></a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#Faleconos">Fale conosco</a></li>
+                    <li><a href="#sup">Suporte</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
             </div>
-            <ul class="nav-list">
-                <li><a href="#">Fale conosco</a></li>
-                <li><a href="Planos.html">Planos</a></li>
-                <li><a href="#">Suporte</a></li>
-                <li> <a href="#"> Login </a></li>
-            </ul>
         </nav>
     </header>
+    <h1 class="Disp">Escolha seu plano</h1>
+    <div id='plan'>
+        <div class="Caixas_planos">
+            <img src="img/planos/MedalhaPrata 1.png" alt="">
+            <h4>Plano Silver </h4>
+            <h1>R$150,00</h1>
+            <p>Mensal</p>
+            <a href="./Planos.html">Contratar</a>
+        </div>
+
+        <div class="Caixas_planos">
+            <img src="img/planos/Medalha ouro.png" alt="">
+            <h4>Plano Gold </h4>
+            <h1>R$280,00</h1>
+            <p>Mensal</p>
+            <a href="./Planos.html">Contratar</a>
+        </div>
+
+        <div class="Caixas_planos">
+            <img src="img/planos/Medalhadiamond.png" alt="">
+            <h4> </h4>
+            <h4>Plano Diamond </h4>
+            <h1>R$500,00</h1>
+            <p>Mensal</p>
+            <a href="./Planos.html">Contratar</a>
+        </div>
+    </div>
     
 </body>
 </html>
