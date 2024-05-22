@@ -37,39 +37,39 @@
             <h1>Faça seu cadastro</h1>
             <div class="config_cadastro">
                 <div class="formcadastro">
-                    <form action="cadastro">
-                        <label for="emailcad">E-mail</label>
-                        <input type="email"  id="emailcadastro">
-                        <label for="">Senha</label>
-                        <input type="password" name="" id="">
-                        <label for="">Nome da empresa</label>
-                        <input type="text">
+                    <form action="/cadastro" method="post">
+                        <label for="newEmail">E-mail</label>
+                        <input type="email"  id="newEmail" name="newEmail" required>
+                        <label for="newSenha">Senha</label>
+                        <input type="password" id="newSenha" name="newSenha" required>
+                        <label for="newEmpresa">Nome da empresa</label>
+                        <input type="text" id="newEmpresa" name="newEmpresa" required>
                     </form>
                 </div>
                 <div class="formcadastro">
-                    <form action="cadastro">
-                        <label for="nomecad">Nome completo</label>
-                        <input type="text"  id="nomecadastro">
-                        <label for="cpfcad">CPF</label>
-                        <input type="text"  id="Cpfcadastro">
-                        <label for="cargocad">Cargo</label>
-                        <input type="text"  id="Cargocadastro">
+                    <form action="/cadastro" method="post">
+                        <label for="newName">Nome completo</label>
+                        <input type="text"  id="newName" name="newName" required>
+                        <label for="newCpf">CPF</label>
+                        <input type="number"  id="newCpf" name="newCpf" required>
+                        <label for="newCargo">Cargo</label>
+                        <input type="text"  id="newCargo" name="newCargo" required>
                     </form>
                 </div>
                 <div class="formcadastro">
-                    <form action="cadastro">
-                        <label for="telefone">Telefone</label>
-                        <input type="text"  id="telfonecad">
-                        <label for="cep">CEP</label>
-                        <input type="number"  id="cepcad">
-                        <label for="Cnpjcad">CNPJ</label>
-                        <input type="text"  id="Cnpjcadastro">
+                    <form action="/cadastro" method="post">
+                        <label for="newTelefone">Telefone</label>
+                        <input type="number"  id="newTelefone" name="newTelefone" required>
+                        <label for="newCep">CEP</label>
+                        <input type="number"  id="newCep" name="newCep" required>
+                        <label for="newCnpj">CNPJ</label>
+                        <input type="number"  id="newCnpj" name="newCnpj" required>
                     </form>
                 </div>
             </div>
-            <button id="Confirmarlogin">Confirmar</button>
+            <button type="submit">Confirmar</button>
             <p>Já tem uma conta?</p>
-            <a href="login.html"> Faça seu login</a>
+            <a onclick="window.location.href = '/login.html'"> Faça seu login</a>
         </div>
     </div>
     

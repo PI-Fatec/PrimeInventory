@@ -34,14 +34,14 @@
     
         <div class="caixalogin">
             <h1>Faça seu login</h1>
-            <form action="login">
-                <label for="emailogin">E-mail:</label>
-                <input type="email"><br>
-                <label for="senhalogin">Senha:</label>
-                <input type="password"><br>
-                <button id="Confirmarlogin">Confirmar</button>
+            <form action="/login" method="post">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required><br>
+                <button type="submit" value="login">Confirmar</button>
                 <p>Ainda não tem uma conta PrimeInv?  </p>
-                <a href="cadastro.html"> Inscreva-se agora </a>
+                <a onclick="window.location.href = '/cadastro.html'"> Inscreva-se agora </a>
             </form>
         </div>
     </div>
