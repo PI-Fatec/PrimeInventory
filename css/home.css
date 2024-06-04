@@ -1,0 +1,100 @@
+.navBar .nav-item .nav-link{
+    color: #FFFFFF;
+}
+
+.navbar {
+    border-bottom: 5px solid white;
+}
+  
+.navbar-toggler-custom .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    
+  }
+  
+.navbar-toggler-custom {
+    border: 1px solid white; 
+}
+#navBar {
+    background-color: black;
+
+}
+
+#informacoes-plataforma {
+    background-color: black;
+}
+
+#navBar .nav-item .nav-link {
+    color: #FFFFFF;
+}
+
+#informacoes-plataforma h2 {
+    font-size: 45px;
+    padding: 78px 0px 6px 0px;
+    color: #FFFFFF;
+}
+
+#informacoes-plataforma .card-body {
+    min-height: 96px;
+}
+
+
+#informacoes-plataforma .card-body p {
+    font-size: 20px;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.informacoes-empresa h2 {
+    font-size: 50px;
+    padding-top: 38px;
+    padding-bottom: 32px;
+}
+
+.informacoes-empresa p {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 48px;
+    padding-bottom: 32px;
+}
+
+.planos-disponiveis-inventory {
+    background-color: black;;
+}
+
+.card-text {
+    font-size: 45px;
+    font-weight: 650;
+    color: black;
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+    .card-text {
+        font-size: 28px !important;
+
+    }
+
+    .card-title {
+        min-height: 50px;
+    }
+
+    .informacoes-empresa h2 {
+        font-size: 28px;
+        font-weight: 700;
+        
+    }
+
+    #informacoes-plataforma h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 884px) {
+    .card-text {
+        font-size: 28px !important;
+
+    }
+}

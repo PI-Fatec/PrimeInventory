@@ -1,85 +1,10 @@
 body{
-    background-color: white;
+    background-color: #ffffff !important;
 }
 
-.center_log_cad {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.texto-marca{
+    font-size: 32px;
+    font-weight: 500; 
 }
 
-.logo-image {
-    max-width: 100%;
-    height: auto;
-}
 
-.refrao{
-    max-width: 100%;
-    height: auto;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    font-size: 15pt;
-}
-
-.caixalogin{
-    border-radius: 5px;
-    width: 280px;
-    height: auto; 
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-}
-
-form{
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-input{
-    border-radius: 5px;
-    border: 1px solid;
-    padding: 6px;
-}
-
-.caixalogin a{
-    margin-top: 10px;
-    text-align: center;
-    color: black;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-}
-
-.caixalogin a:hover{
-    color: blue;
-}
-
-.caixalogin button{
-    background-color: #009AED;
-    border-radius: 4px;
-    border: none;
-    width: 200px;
-    height: 30px;
-    color: white;
-    margin-bottom: 10px;
-}
-
-.caixalogin button:hover{
-    background-color: #210ba0;
-}
-
-@media (max-width: 768px) {
-    .caixalogin {
-        top: 90%;  
-        left: 40%;
-        transform: translate(-50%, -50%);
-        width: auto; 
-        max-width: 300px; 
-        padding: 15px; 
-    }
-
-
-}

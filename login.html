@@ -7,45 +7,82 @@
     <link rel="stylesheet" href="./css/extends.css">
     
     <title>Prime Inventory</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="config_nav">
-                <a class="logo" href="index.html"><img src="img/PrimeInventory2 1.png" alt="Logo da PrimeInventory">
+    <header id="navBar">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="html/index.html">
+                    <img src="img/PrimeInventory2 1.png" alt="Logo da PrimeInventory" class="img-fluid">
                 </a>
-                <div class="mobile-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Fale conosco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Planos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Suporte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="/img/img-login.png" alt="" style="max-width: 20px;">
+                                login
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="nav-list">
-                    <li><a href="#Faleconos">Fale conosco</a></li>
-                    <li><a href="#plan">Planos</a></li>
-                    <li><a href="#sup">Suporte</a></li>
-                </ul>
             </div>
         </nav>
     </header>
 
-    <div class="center_log_cad">
-        <img class="logo-image" src="img/login/PrimeInv 2.svg">
-        <p class="refrao">O seu banco de dados, sob controle.</p>
-    
-        <div class="caixalogin">
-            <h1>Faça seu login</h1>
-            <form action="/login" method="post">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required><br>
-                <button type="submit" value="login">Confirmar</button>
-                <p>Ainda não tem uma conta PrimeInv?  </p>
-                <a onclick="window.location.href = '/cadastro.html'"> Inscreva-se agora </a>
-            </form>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <img class="img-fluid logo-marca" src="img/login/PrimeInv 2.svg">
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <p class="texto-marca">O seu banco de dados, sob controle.</p>
+                </div>
+            </div>
+
+            <div class="forms-login">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h4 class="text-center">Faça seu login</h4>
+                    </div>
+
+                    <div class="col-12 col-lg-6">        
+                        <form action="/login" method="post">
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="email" name="email" required>                        
+                            </div>
+                            <div class="mb-3">
+                              <label for="senha" class="form-label">Senha</label>
+                              <input type="password" class="form-control" id="senha" name="senha" required>
+                            </div>                
+                            <button type="submit" class="btn btn-primary" value="login">Continuar</button>
+                            <p>Ainda não tem uma conta PrimeInv?<a onclick="window.location.href = '/cadastro.html'"> Inscreva-se agora </a></p>
+                         
+                          </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
-<script src="mobile-navbar.js"></script>
 </html>
+
+
