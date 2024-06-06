@@ -1,0 +1,154 @@
+/* Estilos gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilos da barra de navegação */
+#navBar {
+    background-color: black;
+    padding: 0.5rem 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand {
+    flex-grow: 1;
+}
+
+.navbar-toggler-custom {
+    border: 1px solid white;
+}
+
+.navbar-toggler-custom .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgba(255, 255, 255, 1)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>');
+}
+
+.navbar {
+    border-bottom: 5px solid white;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    align-items: center;
+}
+
+.nav-item {
+    padding: 0 1rem;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-link:hover {
+    background-color: #505050;
+}
+
+/* Estilos para as caixas de planos */
+.Disp {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+#plan {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.Caixas_planos {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: calc(33.333% - 1rem);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.Caixas_planos img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.Caixas_planos h4,
+.Caixas_planos h1,
+.Caixas_planos p {
+    margin-bottom: 0.5rem;
+}
+
+.Caixas_planos a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.Caixas_planos a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (min-width: 320px) and (max-width: 450px) {
+    .card-text {
+        font-size: 28px !important;
+
+    }
+
+    .card-title {
+        min-height: 50px;
+    }
+
+    .informacoes-empresa h2 {
+        font-size: 28px;
+        font-weight: 700;
+        
+    }
+    .Caixas_planos {
+        width: 80%;
+    }
+    
+    #informacoes-plataforma h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 884px){
+
+    .navbar-brand img {
+        margin-bottom: 1rem;
+    }
+
+    #plan {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Caixas_planos {
+        width: 80%;
+    }
+    .card-text {
+        font-size: 28px !important;
+
+    }
+}
