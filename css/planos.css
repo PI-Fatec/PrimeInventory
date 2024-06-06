@@ -75,13 +75,32 @@ body, html {
 }
 
 .Caixas_planos {
-    background-color: #fff;
+    background-color: #f5f5f5;
     border: 1px solid #ddd;
     padding: 1rem;
     width: calc(33.333% - 1rem);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative; /* Adicionado para posicionar o efeito de luz */
 }
+
+/* Efeito de luz para cada plano */
+.Caixas_planos::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 10px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Cores específicas para cada plano */
+.Caixas_planos:nth-child(1)::before { background-color: rgba(192,192,192, 0.5); } /* Prata */
+.Caixas_planos:nth-child(2)::before { background-color: rgba(255,215,0, 0.5); } /* Ouro */
+.Caixas_planos:nth-child(3)::before { background-color: rgba(0, 225, 255, 0.959); } /* Diamante */
 
 .Caixas_planos img {
     width: 100px;
@@ -106,6 +125,41 @@ body, html {
 .Caixas_planos a:hover {
     background-color: #0056b3;
 }
+
+/* Borda para os planos */
+
+.Caixas_planos:nth-child(1) {
+    border-radius: 20px;
+    border: 2px solid rgba(112, 112, 112, 0.5); /* Borda prata */
+    padding: calc(1rem - 1px); /* Ajuste no padding para manter o tamanho */
+}
+.Caixas_planos:nth-child(2) {
+    border-radius: 20px;
+    border: 2px solid #ffd700; /* Borda dourada */
+    padding: calc(1rem - 1px); /* Ajuste no padding para manter o tamanho */
+}
+.Caixas_planos:nth-child(3) {
+    border-radius: 20px;
+    border: 2px solid rgba(0, 225, 255, 0.959); /* Borda Diamante */
+    padding: calc(1rem - 1px); /* Ajuste no padding para manter o tamanho */
+}
+
+/* Destacando o Plano Gold como recomendado */
+
+.Caixas_planos:nth-child(2) h4::after {
+    content: 'Recomendado';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffd700;
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
 
 /* Responsividade */
 @media (min-width: 320px) and (max-width: 450px) {
