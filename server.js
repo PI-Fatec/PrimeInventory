@@ -31,6 +31,7 @@ const connection = mysql.createConnection({
 
 app.use(express.json());
 
+
 // Servir arquivos estáticos (como index.html)
 app.use(express.static(path.join(__dirname)));
 
@@ -63,7 +64,7 @@ app.post('/login', (req, res) => {
             });
 
         } else {
-            // Alerta de igualdade
+            // Alerta de valores errados
             res.write('<script>alert("Email ou senha incorretos, tente novamente");</script>');
             // Redirecionar para a tela de cadastro novamente
             res.write('<script>setTimeout(function() { window.location.href = "/login.html"; }, 300);</script>');
@@ -77,7 +78,7 @@ app.post('/login', (req, res) => {
 app.post('/cadastro', (req, res) => {
     console.log("Teste", req.body)
     const { newEmail, newSenha, newName, newCpf, newEmpresa, newCargo, newTelefone, newCep, newCnpj } = req.body;
-    const queryIfEquals = `SELECT * FROM usuario WHERE email = '${newEmail}' AND senha = '${newSenha}' OR cnpj = '${newCnpj}' OR nome_da_empresa = '${newEmpresa}'`
+    const queryIfEquals = `SELECT * FROM usuario WHERE email = '${newEmail}' OR senha = '${newSenha}' OR cnpj = '${newCnpj}' OR nome_da_empresa = '${newEmpresa}'`
     const queryCadastro = `INSERT INTO usuario (email, senha, nome_completo, cpf, nome_da_empresa, cargo, telefone, cep, cnpj)
     VALUES ('${newEmail}', '${newSenha}', '${newName}', '${newCpf}', '${newEmpresa}', '${newCargo}', '${newTelefone}', '${newCep}', '${newCnpj}')`;
     
@@ -90,7 +91,7 @@ app.post('/cadastro', (req, res) => {
         
         if (results.length > 0) {
             // Alerta de igualdade
-            res.write('<script>alert("Cadastro indisponivel, este email/senha/cnpj/empresa ja estão em uso");</script>');
+            res.write('<script>alert("Cadastro indisponivel, este email, senha, cnpj ou empresa ja estão em uso");</script>');
             // Redirecionar para a tela de cadastro novamente
             res.write('<script>setTimeout(function() { window.location.href = "/cadastro.html"; }, 300);</script>');
             res.end();
@@ -104,19 +105,13 @@ app.post('/cadastro', (req, res) => {
                     // Alerta de sucesso
                     res.write('<script>alert("Cadastro realizado com sucesso!");</script>');
                     // Redirecionar para a tela de login
-                    res.write('<script>setTimeout(function() { window.location.href = "/index.html"; }, 300);</script>');
+                    res.write('<script>setTimeout(function() { window.location.href = "/login.html"; }, 300);</script>');
                     res.end();
                 }
             });
         }
     });
 });
-
-
-
-
-
-
 
 
 // Iniciar o servidor
