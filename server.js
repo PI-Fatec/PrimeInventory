@@ -52,7 +52,7 @@ app.post('/login', (req, res) => {
 
         if (results.length > 0) {
             // Redirecionar para a tela do jogo
-            res.sendFile(path.join(__dirname, '/index.html'));
+            res.sendFile(path.join(__dirname, '/home.html'));
 
             //Rora para fornecero usuario_id ao código .js
             connection.query(queryUserID, function (err, results) {
