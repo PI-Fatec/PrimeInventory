@@ -1,4 +1,18 @@
 # README: Prime Inventory
+# Desenvolvido por:
+<a href="https://www.linkedin.com/in/inacio-santana/">Inácio Santana<a>
+<br>
+<a href="https://www.linkedin.com/in/jhonatan-dias-farias/">Jhonatan Dias<a>
+<br>
+<a href= "https://www.linkedin.com/in/rafael-gomes-a7b56a230/"> Rafael Gomes<a>
+<br>
+<a href="https://www.linkedin.com/in/vinicius-de-paula-791466290/">Vinicius de Paula<a>
+
+
+# Link do site
+
+# Video de apresentação
+
 
 # Documentação
 A documentação está na pasta "DOC/Doc_Primeinventory"
@@ -42,4 +56,12 @@ Oferece uma funcionalidade de pesquisa que permite encontrar produtos por nome o
 <img src ="img_readm/Desktop - Planos.png">
 
 ## Login
-<img src ="img_readn/Login.png">
+<img src ="img_readm/Login.png">
+
+## Cadastro
+
+<img src ="img_readm/Desktop - Cadastro.png">
+
+
+# Site final
+
