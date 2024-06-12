@@ -78,8 +78,6 @@ body, html {
 .btn-primary {
     background-color: #007bff; /* Cor do botão */
     color: white; /* Cor do texto do botão */
-    width: 80px;
-    height: 30px;
     border-radius: 7px;
 }
 
