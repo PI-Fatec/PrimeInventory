@@ -7,4 +7,13 @@ body{
     font-weight: 500; 
 }
 
+.botao-loguin {
+    color: white;
+    background-color: #009AED;
+    border: none;
+    padding: 5px 0px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
 

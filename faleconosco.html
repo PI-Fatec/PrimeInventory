@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link REL="SHORTCUT ICON" HREF="img/PrimeInventory2Logo 1 (1).svg">
     <link rel="stylesheet" href="./css/extends.css">
-    <title>Prime Inventory</title>
+    <title>Prime Inventory - Fale conosco</title>
 </head>
 <body>
     <header id="navBar">
@@ -37,54 +37,36 @@
         </nav>
     </header>
 
-    <h1 class="Disp">Escolha seu plano</h1>
-    <div id='plan'>
-        <!-- Plano Silver -->
-        <div class="Caixas_planos">
-            <img src="img/planos/MedalhaPrata 1.png" alt="Plano Silver">
-            <h4>Plano Silver</h4>
-            <h1>R$150,00</h1>
-            <p>Mensal</p>
-            <p>Ideal para quem está começando e deseja acessar os serviços básicos. Este plano oferece um excelente custo-benefício, mantendo um alto padrão de qualidade.</p>
-            <ul>
-                <li>Acesso Seguro: Conexão criptografada para segurança dos dados.</li>
-                <li>Gerenciamento Básico: Ferramentas essenciais para eficiência.</li>
-                <li>Suporte Técnico: Para resolver dúvidas e problemas básicos.</li>
-            </ul>
-            <a href="./Planos.html">Contratar</a>
-        </div>
-    
-        <!-- Plano Gold -->
-        <div class="Caixas_planos">
-            <img src="img/planos/Medalha ouro.png" alt="Plano Gold">
-            <h4>Plano Gold</h4>
-            <h1>R$280,00</h1>
-            <p>Mensal</p>
-            <p>Perfeito para usuários intermediários que procuram mais recursos e vantagens. O Plano Gold expande as possibilidades com funcionalidades adicionais para uma experiência mais completa.</p>
-            <ul>
-                <li>Recursos Avançados: Mais ferramentas para otimização do banco de dados.</li>
-                <li>Backup Automático: Backups regulares para proteção de dados.</li>
-                <li>Suporte Prioritário: Atendimento prioritário no suporte técnico.</li>
-            </ul>
-            <a href="./Planos.html">Contratar</a>
-        </div>
-    
-        <!-- Plano Diamond -->
-        <div class="Caixas_planos">
-            <img src="img/planos/Medalhadiamond.png" alt="Plano Diamond">
-            <h4>Plano Diamond</h4>
-            <h1>R$500,00</h1>
-            <p>Mensal</p>
-            <p>O topo de linha para os mais exigentes. O Plano Diamond é a escolha definitiva para quem busca o máximo em termos de recursos, suporte e exclusividade.</p>
-            <ul>
-                <li>Gestão Completa: Administração avançada do banco de dados.</li>
-                <li>Segurança Máxima: Recursos de segurança de ponta.</li>
-                <li>Consultoria Especializada: Para otimização e escalabilidade.</li>
-            </ul>
-            <a href="./Planos.html">Contratar</a>
-        </div>
+    <h1 class="Disp">Fale conosco</h1>
+    <div id='fale'>
+        <!-- Formulário de contato -->
+        <form action="/submit-contact-form" method="post">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Sua mensagem:</label>
+                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center">Enviar</button>
+        </form>
     </div>
-    
+    <div id="Alternativa">
+        <!-- Alternativa de contato via e-mail -->
+        <p>Se preferir, você pode nos contatar diretamente pelo e-mail: contato@primeinventory.com.br</p>
+
+        <!-- Alternativa de contato via telefone -->
+        <p>Para questões urgentes, você pode nos ligar no número: +55 11 99999-9999</p>
+
+        <!-- Alternativa de contato via WhatsApp -->
+        <p>Para uma comunicação mais rápida, você pode nos chamar pelo WhatsApp no número: +55 11 12345-6789</p>
+    </div>
+
     <footer id="footer">
         <div class="footer__content max-width">
           <p class="mb-m">Site Desenvolvido por:</p>
@@ -119,7 +101,7 @@
                 <span>Desenvolvedor Web</span>
               </p>
               <div class="social-media">
-                <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BoU%2BW4o9dRwOjlJKaifsjTg%3D%3D" target="_blank"><img src="img/linkedin.svg"
+                <a href="https://www.linkedin.com/in/rafael-gomes-a7b56a230/" target="_blank"><img src="img/linkedin.svg"
                     alt="linkedin"></a>
                 <a href="https://github.com/RafaelGomesPorfirio" target="_blank"><img src="img/github.svg" alt="github"></a>
                 </a>
@@ -165,6 +147,7 @@
             
             <p class="footer__copyright">@2023 - Todos os direitos reservados.</p>
       </footer>
-    
+
 </body>
 </html>
+
