@@ -1,15 +1,12 @@
 .caixacadastro{
-    border-radius: 5px;
-    width: 680px;
+    border-radius: 8px;
+    max-width: 680px;
     height: auto;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+   
     margin-bottom: 20px;
 }
 
@@ -22,7 +19,7 @@
     color: blue;
 }
 
-.caixacadastro button{
+.botao-confirm-cadastro {
     background-color: #009AED;
     border-radius: 4px;
     border: none;
@@ -49,12 +46,10 @@
     flex-direction: column;
 }
 
-input{
-    border-radius: 5px;
-    border: 1px solid;
-    padding: 6px;
-    margin: 5px;
+form label {
+    min-height: 35px !important;
 }
+
 
 @media (max-width: 768px) {
     .caixacadastro {
@@ -71,6 +66,10 @@ input{
         margin-bottom: 1em;
         font-size: 1em;
         text-align: center;
+    }
+
+    form label {
+        font-size: 12px;
     }
 
 
