@@ -51,7 +51,7 @@ app.post('/login', (req, res) => {
         }
 
         if (results.length > 0) {
-            // Redirecionar para a tela do jogo
+            // Redirecionar para a tela de gerenciamento
             res.sendFile(path.join(__dirname, '/home.html'));
 
             //Rora para fornecero usuario_id ao código .js
@@ -66,7 +66,7 @@ app.post('/login', (req, res) => {
             // Alerta de igualdade
             res.write('<script>alert("Email ou senha incorretos, tente novamente");</script>');
             // Redirecionar para a tela de cadastro novamente
-            res.write('<script>setTimeout(function() { window.location.href = "/index.html"; }, 300);</script>');
+            res.write('<script>setTimeout(function() { window.location.href = "/login.html"; }, 300);</script>');
             res.end();;
         }
     });
@@ -77,7 +77,7 @@ app.post('/login', (req, res) => {
 app.post('/cadastro', (req, res) => {
     console.log("Teste", req.body)
     const { newEmail, newSenha, newName, newCpf, newEmpresa, newCargo, newTelefone, newCep, newCnpj } = req.body;
-    const queryIfEquals = `SELECT * FROM usuario WHERE email = '${newEmail}' AND senha = '${newPassword}' OR cnpj = '${newCnpj}' OR nome_da_empresa = '${newEmpresa}'`
+    const queryIfEquals = `SELECT * FROM usuario WHERE email = '${newEmail}' AND senha = '${newSenha}' OR cnpj = '${newCnpj}' OR nome_da_empresa = '${newEmpresa}'`
     const queryCadastro = `INSERT INTO usuario (email, senha, nome_completo, cpf, nome_da_empresa, cargo, telefone, cep, cnpj)
     VALUES ('${newEmail}', '${newSenha}', '${newName}', '${newCpf}', '${newEmpresa}', '${newCargo}', '${newTelefone}', '${newCep}', '${newCnpj}')`;
     
