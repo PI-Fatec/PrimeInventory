@@ -62,6 +62,10 @@ Oferece uma funcionalidade de pesquisa que permite encontrar produtos por nome o
 
 <img src ="img_readm/Desktop - Cadastro.png">
 
+## Gerenciamento
+![Gerenciamento](https://github.com/PI-Fatec/PrimeInventory/assets/127760321/b98b3698-d9fc-4df4-92c4-c7ad033b4338)
+
+
 
 # Site final
 
