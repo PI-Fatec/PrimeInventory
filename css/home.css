@@ -70,6 +70,13 @@
     color: black;
 }
 
+.botao-saiba-mais-planos {
+    background-color: #009AED;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
 @media (min-width: 320px) and (max-width: 450px) {
     .card-text {
         font-size: 28px !important;
