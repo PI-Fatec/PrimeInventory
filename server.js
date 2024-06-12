@@ -114,6 +114,40 @@ app.post('/cadastro', (req, res) => {
 });
 
 
+// Rota para receber do front e fornecer os dados do banco
+app.get('/pesquisar', async (req, res) => {
+    console.log("Teste", req.body)
+    const { selectId, selectNome, selectValor, selectFornecedor, selectMarca } = req.body;
+    console.log("Teste se recebeu o username sendo: ", user); 
+    // CALL get_produtos(usuario_id, produto_id, nome_prod, valor_prod, fornecedor_prod, marca_prod);
+    const getProdutos = `CALL get_produtos(${userID}, ${selectId}, ${selectNome}, ${selectValor}, ${selectFornecedor}, ${selectMarca});`
+    try {
+        // Consulta para obter os dados do banco
+        connection.query(getProdutos, function (err, bancoResults) {
+            if (err) {
+                console.error('Erro ao buscar dados do banco:', err);
+                return res.status(500).json({ error: 'Erro ao buscar dados do banco.' });
+            }
+            console.log("ResultGetProdutos: ", bancoResults);
+            const { produto_id: produto0, nome: nome0, valor_prod: valor0, fornecedor_prod: fornecedor0, marca_prod: marca0 } = bancoResults[0];
+            const { produto_id: produto1, nome: nome1, valor_prod: valor1, fornecedor_prod: fornecedor1, marca_prod: marca1 } = bancoResults[0];
+            const { produto_id: produto2, nome: nome2, valor_prod: valor2, fornecedor_prod: fornecedor2, marca_prod: marca2 } = bancoResults[0];
+            const { produto_id: produto3, nome: nome3, valor_prod: valor3, fornecedor_prod: fornecedor3, marca_prod: marca3 } = bancoResults[0];
+            const { produto_id: produto4, nome: nome4, valor_prod: valor4, fornecedor_prod: fornecedor4, marca_prod: marca4 } = bancoResults[0];
+            res.json({ produto0, nome0, valor0, fornecedor0, marca0, 
+                produto1, nome1, valor1, fornecedor1, marca1, 
+                produto2, nome2, valor2, fornecedor2, marca2, 
+                produto3, nome3, valor3, fornecedor3, marca3, 
+                produto4, nome4, valor4, fornecedor4, marca4, 
+            });
+        });
+    } catch (error) {
+        console.error('Erro ao buscar dados do banco:', error);
+        res.status(500).json({ error: 'Erro ao buscar dados do herói e do vilão.' });
+    }
+});
+
+
 // Iniciar o servidor
 app.listen(PORT, () => {
     console.log(`Servidor Express rodando na porta ${PORT}`);
