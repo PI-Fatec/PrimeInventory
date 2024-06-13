@@ -11,60 +11,34 @@
 </head>
 <body>
     <div id="app" class="container">
-        <div class="tabela_banco">
-            <div class="colunas_banco">
-                <p>{{ produto0 }}</p>
-                <p>{{ produto1 }}</p>
-                <p>{{ produto2 }}</p>
-                <p>{{ produto3 }}</p>
-                <p>{{ produto4 }}</p>
-            </div>
-            <div class="colunas_banco">
-                <p>{{ nome0 }}</p>
-                <p>{{ nome1 }}</p>
-                <p>{{ nome2 }}</p>
-                <p>{{ nome3 }}</p>
-                <p>{{ nome4 }}</p>
-            </div>
-            <div class="colunas_banco">
-                <p>{{ valor0 }}</p>
-                <p>{{ valor1 }}</p>
-                <p>{{ valor2 }}</p>
-                <p>{{ valor3 }}</p>
-                <p>{{ valor4 }}</p>
-            </div>
-            <div class="colunas_banco">
-                <p>{{ fornecedor0 }}</p>
-                <p>{{ fornecedor1 }}</p>
-                <p>{{ fornecedor2 }}</p>
-                <p>{{ fornecedor3 }}</p>
-                <p>{{ fornecedor4 }}</p>
-            </div>
-            <div class="colunas_banco">
-                <p>{{ marca0 }}</p>
-                <p>{{ marca1 }}</p>
-                <p>{{ marca2 }}</p>
-                <p>{{ marca3 }}</p>
-                <p>{{ marca4 }}</p>
-            </div>
-            <form action="/pesquisar" method="post">
-                <label>Código</label>
-                <input type="text" id="" name="selectId" value="NULL" required>
+        <div>
+            <form action="/adicionar" method="post">
                 <label>Descrição</label>
-                <input type="text" id="" name="selectNome" value="NULL" required>
+                <input type="text" id="nomeProd" name="nomeProd" required>
                 <label>Valor</label>
-                <input type="text" id="" name="selectValor" value="NULL" required>
+                <input type="number" id="valorProd" name="valorProd" required>
                 <label>Fornecedor</label>
-                <input type="text" id="" name="selectFornecedor" value="NULL" required>
+                <input type="text" id="fornecedorProd" name="fornecedorProd" required>
                 <label>Marca</label>
-                <input type="text" id="" name="selectMarca" value="NULL" required>
+                <input type="text" id="marcaProd" name="marcaProd" required>
+                <button class="botao-confirm-cadastro" type="submit" value="cadastro">Confirmar</button>
+            </form>
+        </div>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio cupiditate dicta nulla rem esse enim tempora iste? 
+                Repellat iste quia nam fugit animi minima ratione atque assumenda. Eaque, dolorum mollitia?</p>
+        </div>
+        <div>
+            <form action="deletar" method="post">
+                <label>Código do produto</label>
+                <input type="number" id="produtoId" name="produtoId" required>
                 <button class="botao-confirm-cadastro" type="submit" value="cadastro">Confirmar</button>
             </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script>
-        new Vue({
+        /*new Vue({
             el: '#app',
             data: {
                 produto0: 0,
@@ -132,7 +106,7 @@
                     }
                 }
             }
-        });
+        });*/
     </script>
 </body>
 </html>

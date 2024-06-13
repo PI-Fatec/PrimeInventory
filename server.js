@@ -114,7 +114,45 @@ app.post('/cadastro', (req, res) => {
 });
 
 
-// Rota para receber do front e fornecer os dados do banco
+app.post('/adicionar', (req, res) => {
+    console.log("Teste", req.body)
+    const { nomeProd, valorProd, fornecedorProd, marcaProd } = req.body
+    const addProd = `INSERT INTO produtos (usuario_id, nome_prod, valor_prod, fornecedor_prod, marca_prod) VALUES 
+    (${userID}, '${nomeProd}', ${valorProd}, '${fornecedorProd}', '${marcaProd}')`
+    connection.query(addProd,function (err, results) {
+        if (err) {
+            console.error('Erro ao inserir produto:', err);
+            res.status(500).send('Erro interno ao inserir produto:');
+            return;
+        } else{
+            res.send('<script>alert("Produto adicionado"); window.location.href = "/gerenciamento.html";</script>');
+        }
+    });
+});
+
+
+app.post('/deletar', (req, res) => {
+    const produtoId = req.body.produtoId;
+
+    const deleteProd = `DELETE FROM produtos WHERE produto_id = ${produtoId}`;
+
+    connection.query(deleteProd, function (err, results) {
+        if (err) {
+            console.error('Erro ao deletar produto:', err);
+            res.status(500).send('Erro interno ao deletar produto.');
+            return;
+        }
+
+        if (results.affectedRows > 0) {
+            res.send('<script>alert("Produto deletado com sucesso"); window.location.href = "/gerenciamento.html";</script>');
+        } else {
+            res.status(404).send('Produto não encontrado.');
+        }
+    });
+});
+
+
+/*// Rota para receber do front e fornecer os dados do banco
 app.post('/pesquisar', async (req, res) => {
     console.log("Teste", req.body)
     const { selectId, selectNome, selectValor, selectFornecedor, selectMarca } = req.body;
@@ -160,7 +198,7 @@ app.post('/pesquisar', async (req, res) => {
                 const { produto_id: produto1, nome: nome1, valor_prod: valor1, fornecedor_prod: fornecedor1, marca_prod: marca1 } = bancoResults[1];
                 const { produto_id: produto2, nome: nome2, valor_prod: valor2, fornecedor_prod: fornecedor2, marca_prod: marca2 } = bancoResults[2];
                 const { produto_id: produto3, nome: nome3, valor_prod: valor3, fornecedor_prod: fornecedor3, marca_prod: marca3 } = bancoResults[3];
-                const { produto_id: produto4, nome: nome4, valor_prod: valor4, fornecedor_prod: fornecedor4, marca_prod: marca4 } = bancoResults[4];*/
+                const { produto_id: produto4, nome: nome4, valor_prod: valor4, fornecedor_prod: fornecedor4, marca_prod: marca4 } = bancoResults[4];
                 
                 res.json({ produto0, nome0, valor0, fornecedor0, marca0, 
                     produto1, nome1, valor1, fornecedor1, marca1, 
@@ -174,7 +212,7 @@ app.post('/pesquisar', async (req, res) => {
         console.error('Erro ao buscar dados do banco:', error);
         res.status(500).json({ error: 'Erro ao buscar dados do herói e do vilão.' });
     }
-});
+});*/
 
 
 // Iniciar o servidor
