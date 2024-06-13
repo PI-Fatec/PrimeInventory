@@ -59,13 +59,16 @@
                         <thead>
                           <tr>
                             <th scope="col">Nome</th>
-                            <th scope="col">Valor</th>                         
+                            <th scope="col">Valor</th>
+                            <th scope="col">Código Produto</th>
+                                                     
                           </tr>
                         </thead>
                         <tbody>
                           <tr v-for="produto in produtos">
                             <th scope="row">{{ produto.nome_prod }}</th>
-                            <td>{{ produto.valor_prod }}</td>                      
+                            <td>{{ produto.valor_prod }}</td> 
+                            <td>{{ produto.produto_id }}</td>                       
                           </tr>                                          
                         </tbody>
                       </table>
