@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link REL="SHORTCUT ICON" HREF="img/PrimeInventory2Logo 1 (1).svg">
+    <link rel="stylesheet" href="./css/extends.css">
+
+    <title>Gerenciamento PrimeInv</title>
+
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="tabela_banco">
+            <div class="colunas_banco">
+                <p>{{ produto0 }}</p>
+                <p>{{ produto1 }}</p>
+                <p>{{ produto2 }}</p>
+                <p>{{ produto3 }}</p>
+                <p>{{ produto4 }}</p>
+            </div>
+            <div class="colunas_banco">
+                <p>{{ nome0 }}</p>
+                <p>{{ nome1 }}</p>
+                <p>{{ nome2 }}</p>
+                <p>{{ nome3 }}</p>
+                <p>{{ nome4 }}</p>
+            </div>
+            <div class="colunas_banco">
+                <p>{{ valor0 }}</p>
+                <p>{{ valor1 }}</p>
+                <p>{{ valor2 }}</p>
+                <p>{{ valor3 }}</p>
+                <p>{{ valor4 }}</p>
+            </div>
+            <div class="colunas_banco">
+                <p>{{ fornecedor0 }}</p>
+                <p>{{ fornecedor1 }}</p>
+                <p>{{ fornecedor2 }}</p>
+                <p>{{ fornecedor3 }}</p>
+                <p>{{ fornecedor4 }}</p>
+            </div>
+            <div class="colunas_banco">
+                <p>{{ marca0 }}</p>
+                <p>{{ marca1 }}</p>
+                <p>{{ marca2 }}</p>
+                <p>{{ marca3 }}</p>
+                <p>{{ marca4 }}</p>
+            </div>
+            <form action="/pesquisar" method="post">
+                <label>Código</label>
+                <input type="text" id="" name="selectId" value="NULL" required>
+                <label>Descrição</label>
+                <input type="text" id="" name="selectNome" value="NULL" required>
+                <label>Valor</label>
+                <input type="text" id="" name="selectValor" value="NULL" required>
+                <label>Fornecedor</label>
+                <input type="text" id="" name="selectFornecedor" value="NULL" required>
+                <label>Marca</label>
+                <input type="text" id="" name="selectMarca" value="NULL" required>
+                <button class="botao-confirm-cadastro" type="submit" value="cadastro">Confirmar</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                produto0: 0,
+                produto1: 0,
+                produto2: 0,
+                produto3: 0,
+                produto4: 0,
+                nome0: '',
+                nome1: '',
+                nome2: '',
+                nome3: '',
+                nome4: '',
+                valor0: 0,
+                valor1: 0,
+                valor2: 0,
+                valor3: 0,
+                valor4: 0,
+                fornecedor0: '',
+                fornecedor1: '',
+                fornecedor2: '',
+                fornecedor3: '',
+                fornecedor4: '',
+                marca0: '',
+                marca1: '',
+                marca2: '',
+                marca3: '',
+                marca4: ''
+            },
+            mounted() {
+                this.fetchBancoData();
+            },
+            methods: {
+                async fetchBancoData() {
+                    try {
+                        const response = await fetch('/pesquisar');
+                        const data = await response.json();
+                        console.log(data);
+                        this.produto0 = data.produto0;
+                        this.produto1 = data.produto1;
+                        this.produto2 = data.produto2;
+                        this.produto3 = data.produto3;
+                        this.produto4 = data.produto4;
+                        this.nome0 = data.nome0;
+                        this.nome1 = data.nome1;
+                        this.nome2 = data.nome2;
+                        this.nome3 = data.nome3;
+                        this.nome4 = data.nome4;
+                        this.valor0 = data.valor0;
+                        this.valor1 = data.valor1;
+                        this.valor2 = data.valor2;
+                        this.valor3 = data.valor3;
+                        this.valor4 = data.valor4;
+                        this.fornecedor0 = data.fornecedor0;
+                        this.fornecedor1 = data.fornecedor1;
+                        this.fornecedor2 = data.fornecedor2;
+                        this.fornecedor3 = data.fornecedor3;
+                        this.fornecedor4 = data.fornecedor4;
+                        this.marca0 = data.marca0;
+                        this.marca1 = data.marca1;
+                        this.marca2 = data.marca2;
+                        this.marca3 = data.marca3;
+                        this.marca4 = data.marca4;
+                    } catch (error) {
+                        console.error('Erro ao buscar dados dos personagens:', error);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

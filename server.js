@@ -53,7 +53,7 @@ app.post('/login', (req, res) => {
 
         if (results.length > 0) {
             // Redirecionar para a tela de gerenciamento
-            res.sendFile(path.join(__dirname, '/home.html'));
+            res.sendFile(path.join(__dirname, '/home2.html'));
 
             //Rora para fornecero usuario_id ao código .js
             connection.query(queryUserID, function (err, results) {
@@ -115,12 +115,12 @@ app.post('/cadastro', (req, res) => {
 
 
 // Rota para receber do front e fornecer os dados do banco
-app.get('/pesquisar', async (req, res) => {
+app.post('/pesquisar', async (req, res) => {
     console.log("Teste", req.body)
     const { selectId, selectNome, selectValor, selectFornecedor, selectMarca } = req.body;
-    console.log("Teste se recebeu o username sendo: ", user); 
+    console.log("Teste se recebeu o username sendo: ", userID); 
     // CALL get_produtos(usuario_id, produto_id, nome_prod, valor_prod, fornecedor_prod, marca_prod);
-    const getProdutos = `CALL get_produtos(${userID}, ${selectId}, ${selectNome}, ${selectValor}, ${selectFornecedor}, ${selectMarca});`
+    const getProdutos = `CALL get_produtos(${userID}, 1, '${selectNome}', 30, '${selectFornecedor}', '${selectMarca}');`
     try {
         // Consulta para obter os dados do banco
         connection.query(getProdutos, function (err, bancoResults) {
@@ -129,17 +129,46 @@ app.get('/pesquisar', async (req, res) => {
                 return res.status(500).json({ error: 'Erro ao buscar dados do banco.' });
             }
             console.log("ResultGetProdutos: ", bancoResults);
-            const { produto_id: produto0, nome: nome0, valor_prod: valor0, fornecedor_prod: fornecedor0, marca_prod: marca0 } = bancoResults[0];
-            const { produto_id: produto1, nome: nome1, valor_prod: valor1, fornecedor_prod: fornecedor1, marca_prod: marca1 } = bancoResults[0];
-            const { produto_id: produto2, nome: nome2, valor_prod: valor2, fornecedor_prod: fornecedor2, marca_prod: marca2 } = bancoResults[0];
-            const { produto_id: produto3, nome: nome3, valor_prod: valor3, fornecedor_prod: fornecedor3, marca_prod: marca3 } = bancoResults[0];
-            const { produto_id: produto4, nome: nome4, valor_prod: valor4, fornecedor_prod: fornecedor4, marca_prod: marca4 } = bancoResults[0];
-            res.json({ produto0, nome0, valor0, fornecedor0, marca0, 
-                produto1, nome1, valor1, fornecedor1, marca1, 
-                produto2, nome2, valor2, fornecedor2, marca2, 
-                produto3, nome3, valor3, fornecedor3, marca3, 
-                produto4, nome4, valor4, fornecedor4, marca4, 
-            });
+            if (bancoResults.length >= 5) {
+                const produto0 = bancoResults[0].produto_id;
+                const produto1 = bancoResults[1].produto_id;
+                const produto2 = bancoResults[2].produto_id;
+                const produto3 = bancoResults[3].produto_id;
+                const produto4 = bancoResults[4].produto_id;
+                const nome0 = bancoResults[0].nome_prod;
+                const nome1 = bancoResults[1].nome_prod;
+                const nome2 = bancoResults[2].nome_prod;
+                const nome3 = bancoResults[3].nome_prod;
+                const nome4 = bancoResults[4].nome_prod;
+                const valor0 = bancoResults[0].valor_prod;
+                const valor1 = bancoResults[1].valor_prod;
+                const valor2 = bancoResults[2].valor_prod;
+                const valor3 = bancoResults[3].valor_prod;
+                const valor4 = bancoResults[4].valor_prod;
+                const fornecedor0 = bancoResults[0].fornecedor_prod;
+                const fornecedor1 = bancoResults[1].fornecedor_prod;
+                const fornecedor2 = bancoResults[2].fornecedor_prod;
+                const fornecedor3 = bancoResults[3].fornecedor_prod;
+                const fornecedor4 = bancoResults[4].fornecedor_prod;
+                const marca0 = bancoResults[0].marca_prod;
+                const marca1 = bancoResults[1].marca_prod;
+                const marca2 = bancoResults[2].marca_prod;
+                const marca3 = bancoResults[3].marca_prod;
+                const marca4 = bancoResults[4].marca_prod;
+
+                /*const { produto_id: produto0, nome: nome0, valor_prod: valor0, fornecedor_prod: fornecedor0, marca_prod: marca0 } = bancoResults[0];
+                const { produto_id: produto1, nome: nome1, valor_prod: valor1, fornecedor_prod: fornecedor1, marca_prod: marca1 } = bancoResults[1];
+                const { produto_id: produto2, nome: nome2, valor_prod: valor2, fornecedor_prod: fornecedor2, marca_prod: marca2 } = bancoResults[2];
+                const { produto_id: produto3, nome: nome3, valor_prod: valor3, fornecedor_prod: fornecedor3, marca_prod: marca3 } = bancoResults[3];
+                const { produto_id: produto4, nome: nome4, valor_prod: valor4, fornecedor_prod: fornecedor4, marca_prod: marca4 } = bancoResults[4];*/
+                
+                res.json({ produto0, nome0, valor0, fornecedor0, marca0, 
+                    produto1, nome1, valor1, fornecedor1, marca1, 
+                    produto2, nome2, valor2, fornecedor2, marca2, 
+                    produto3, nome3, valor3, fornecedor3, marca3, 
+                    produto4, nome4, valor4, fornecedor4, marca4,
+                });
+            }
         });
     } catch (error) {
         console.error('Erro ao buscar dados do banco:', error);
