@@ -27,10 +27,11 @@ HTML
 CSS
 Bootstrap
 Vue.js
+
 ## Backend:
 
-SQL (Banco de dados)
-[Liste aqui outras tecnologias do backend, como linguagens de programação, frameworks, etc.]
+MySQL | NodeJS | JavaScript
+
 # Funcionalidades Principais
 ## Cadastro de Produtos:
 
