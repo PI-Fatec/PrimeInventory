@@ -27,10 +27,11 @@ HTML
 CSS
 Bootstrap
 Vue.js
+
 ## Backend:
 
-SQL (Banco de dados)
-[Liste aqui outras tecnologias do backend, como linguagens de programação, frameworks, etc.]
+MySQL | NodeJS | JavaScript
+
 # Funcionalidades Principais
 ## Cadastro de Produtos:
 
@@ -44,6 +45,13 @@ Permite deletar itens do sistema, removendo completamente suas informações do 
 ## Pesquisa de Produtos:
 
 Oferece uma funcionalidade de pesquisa que permite encontrar produtos por nome ou categoria, exibindo uma lista detalhada dos itens disponíveis.
+
+# Modelo logico e conceitual Banco de Dados
+
+![image](https://github.com/PI-Fatec/PrimeInventory/assets/127760321/10d2f757-82d5-4a39-b2da-2ae350785cb7)
+
+
+![Diagrama em branco](https://github.com/PI-Fatec/PrimeInventory/assets/127760321/3c54f1d0-6b88-45bf-b2ff-adaad0f9738a)
 
 # Prototipação
 
@@ -68,4 +76,5 @@ Oferece uma funcionalidade de pesquisa que permite encontrar produtos por nome o
 
 
 # Site final
+
 
