@@ -16,7 +16,7 @@ const connection = mysql.createConnection({
     host: 'mysql-joguinho-viniyoda360-d36d.f.aivencloud.com',
     port: '27906',
     user: 'avnadmin',
-    password: '',
+    password: 'AVNS_KPxvTUUtahG1o6-uTlV',
     database: 'primeinventory',
     connectTimeout: 100000 // 10 segundos
   });
