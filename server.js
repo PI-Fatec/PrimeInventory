@@ -153,7 +153,7 @@ app.post('/deletar', (req, res) => {
 
 
 app.get('/pesquisar', (req, res) => {
-    const sql = 'SELECT * FROM produtos'; // Assumindo que 'produtos' é o nome da tabela
+    const sql = `SELECT * FROM produtos WHERE usuario_id = ${userID}`; // Assumindo que 'produtos' é o nome da tabela
     connection.query(sql, (err, result) => {
         if (err) {
             console.error('Erro ao executar consulta SQL:', err);
