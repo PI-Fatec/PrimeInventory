@@ -15,7 +15,7 @@ https://primeinventory.onrender.com
 
 # Video de apresentação
 
-
+https://www.youtube.com/watch?v=CZKqo-geHDU
 
 # Documentação
 A documentação está na pasta "DOC/Doc_Primeinventory"
