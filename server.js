@@ -152,6 +152,19 @@ app.post('/deletar', (req, res) => {
 });
 
 
+app.get('/pesquisar', (req, res) => {
+    const sql = 'SELECT * FROM produtos'; // Assumindo que 'produtos' é o nome da tabela
+    connection.query(sql, (err, result) => {
+        if (err) {
+            console.error('Erro ao executar consulta SQL:', err);
+            res.status(500).send('Erro ao buscar produtos');
+        } else {
+            res.json(result); // Retorna os resultados como JSON
+        }
+    });
+});
+
+
 /*// Rota para receber do front e fornecer os dados do banco
 app.post('/pesquisar', async (req, res) => {
     console.log("Teste", req.body)

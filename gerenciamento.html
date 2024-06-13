@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link REL="SHORTCUT ICON" HREF="img/PrimeInventory2Logo 1 (1).svg">
     <link rel="stylesheet" href="./css/extends.css">
 
     <title>Gerenciamento Inventory</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Gerenciamento PrimeInv</title>
 </head>
 <body>
 
@@ -45,6 +45,7 @@
     </header>
 
     <div id="app" class="container">
+        
         <div>
             <form action="/adicionar" method="post">
                 <label>Descrição</label>
@@ -55,51 +56,42 @@
                 <input type="text" id="fornecedorProd" name="fornecedorProd" required>
                 <label>Marca</label>
                 <input type="text" id="marcaProd" name="marcaProd" required>
-                <button class="botao-confirm-cadastro" type="submit" value="cadastro">Confirmar</button>
+                <button class="botao-confirm-cadastro" type="submit">Confirmar</button>
             </form>
         </div>
+
+        <div>
+            <h2>Lista de Produtos</h2>
+            <ul>
+                <!-- Usar Vue.js para iterar sobre os produtos -->
+                <li v-for="produto in produtos">
+                    {{ produto.nome_prod }} - R$ {{ produto.valor_prod }}
+                </li>
+            </ul>
+        </div>
+
         <div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio cupiditate dicta nulla rem esse enim tempora iste? 
                 Repellat iste quia nam fugit animi minima ratione atque assumenda. Eaque, dolorum mollitia?</p>
         </div>
+
         <div>
             <form action="deletar" method="post">
                 <label>Código do produto</label>
                 <input type="number" id="produtoId" name="produtoId" required>
-                <button class="botao-confirm-cadastro" type="submit" value="cadastro">Confirmar</button>
+                <button class="botao-confirm-cadastro" type="submit">Confirmar</button>
             </form>
         </div>
     </div>
+
+    <!-- Incluir Vue.js se necessário -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- Script para interação com os dados do banco de dados -->
     <script>
-        /*new Vue({
+        new Vue({
             el: '#app',
             data: {
-                produto0: 0,
-                produto1: 0,
-                produto2: 0,
-                produto3: 0,
-                produto4: 0,
-                nome0: '',
-                nome1: '',
-                nome2: '',
-                nome3: '',
-                nome4: '',
-                valor0: 0,
-                valor1: 0,
-                valor2: 0,
-                valor3: 0,
-                valor4: 0,
-                fornecedor0: '',
-                fornecedor1: '',
-                fornecedor2: '',
-                fornecedor3: '',
-                fornecedor4: '',
-                marca0: '',
-                marca1: '',
-                marca2: '',
-                marca3: '',
-                marca4: ''
+                produtos: [] // Array para armazenar os produtos
             },
             mounted() {
                 this.fetchBancoData();
@@ -107,40 +99,18 @@
             methods: {
                 async fetchBancoData() {
                     try {
-                        const response = await fetch('/pesquisar');
+                        const response = await fetch('/pesquisar'); // Rota que retorna os dados do banco de dados
                         const data = await response.json();
-                        console.log(data);
-                        this.produto0 = data.produto0;
-                        this.produto1 = data.produto1;
-                        this.produto2 = data.produto2;
-                        this.produto3 = data.produto3;
-                        this.produto4 = data.produto4;
-                        this.nome0 = data.nome0;
-                        this.nome1 = data.nome1;
-                        this.nome2 = data.nome2;
-                        this.nome3 = data.nome3;
-                        this.nome4 = data.nome4;
-                        this.valor0 = data.valor0;
-                        this.valor1 = data.valor1;
-                        this.valor2 = data.valor2;
-                        this.valor3 = data.valor3;
-                        this.valor4 = data.valor4;
-                        this.fornecedor0 = data.fornecedor0;
-                        this.fornecedor1 = data.fornecedor1;
-                        this.fornecedor2 = data.fornecedor2;
-                        this.fornecedor3 = data.fornecedor3;
-                        this.fornecedor4 = data.fornecedor4;
-                        this.marca0 = data.marca0;
-                        this.marca1 = data.marca1;
-                        this.marca2 = data.marca2;
-                        this.marca3 = data.marca3;
-                        this.marca4 = data.marca4;
+                        console.log(data); // Verificar no console os dados recebidos
+
+                        // Atualiza a lista de produtos na interface
+                        this.produtos = data;
                     } catch (error) {
-                        console.error('Erro ao buscar dados dos personagens:', error);
+                        console.error('Erro ao buscar dados dos produtos:', error);
                     }
                 }
             }
-        });*/
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
